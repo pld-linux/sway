@@ -21,6 +21,7 @@ BuildRequires:	pango-devel
 BuildRequires:	pcre-devel
 BuildRequires:	pixman-devel
 BuildRequires:	rpmbuild(macros) >= 1.752
+BuildRequires:	scdoc >= 1.9.2
 BuildRequires:	systemd-devel >= 239
 BuildRequires:	wayland-devel
 BuildRequires:	wayland-protocols >= 1.14
@@ -105,6 +106,16 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/swaymsg
 %attr(755,root,root) %{_bindir}/swaynag
 %{_datadir}/wayland-sessions/sway.desktop
+%{_mandir}/man1/sway.1*
+%{_mandir}/man1/swaymsg.1*
+%{_mandir}/man1/swaynag.1*
+%{_mandir}/man5/sway-bar.5*
+%{_mandir}/man5/sway-input.5*
+%{_mandir}/man5/sway-output.5*
+%{_mandir}/man5/sway.5*
+%{_mandir}/man5/swaynag.5*
+%{_mandir}/man7/sway-ipc.7*
+%{_mandir}/man7/swaybar-protocol.7*
 
 %files backgrounds
 %defattr(644,root,root,755)
