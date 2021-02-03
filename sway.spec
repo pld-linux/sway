@@ -6,6 +6,7 @@ License:	MIT
 Group:		Applications
 Source0:	https://github.com/swaywm/sway/releases/download/%{version}/%{name}-%{version}.tar.gz
 # Source0-md5:	9a7edc89abfc3f36d47546457e0bc901
+Patch0:		x32.patch
 URL:		https://swaywm.org/
 BuildRequires:	OpenGLESv2-devel
 BuildRequires:	bash-completion
@@ -84,6 +85,9 @@ ZSH completion for sway.
 
 %prep
 %setup -q
+%ifarch x32
+%patch0 -p1
+%endif
 
 %build
 %meson build

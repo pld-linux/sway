@@ -1,0 +1,11 @@
+--- sway-1.5.1/common/log.c.orig	2020-11-10 17:47:31.000000000 +0100
++++ sway-1.5.1/common/log.c	2021-02-03 11:01:15.711496602 +0100
+@@ -75,7 +75,7 @@
+ 	clock_gettime(CLOCK_MONOTONIC, &ts);
+ 	timespec_sub(&ts, &ts, &start_time);
+ 
+-	fprintf(stderr, "%02d:%02d:%02d.%03ld ", (int)(ts.tv_sec / 60 / 60),
++	fprintf(stderr, "%02d:%02d:%02d.%03lld ", (int)(ts.tv_sec / 60 / 60),
+ 		(int)(ts.tv_sec / 60 % 60), (int)(ts.tv_sec % 60),
+ 		ts.tv_nsec / 1000000);
+ 
