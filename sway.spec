@@ -85,9 +85,7 @@ ZSH completion for sway.
 
 %prep
 %setup -q
-%ifarch x32
 %patch0 -p1
-%endif
 
 %build
 %meson build
