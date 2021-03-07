@@ -49,7 +49,7 @@ using only the keyboard.
 Summary:	Background images for sway compositor
 Group:		Themes
 Requires:	%{name} = %{version}-%{release}
-%{?noarchpackage}
+BuildArch:	noarch
 
 %description backgrounds
 Background images for sway compositor.
@@ -59,7 +59,7 @@ Summary:	Bash completion for sway
 Group:		Applications/Shells
 Requires:	%{name} = %{version}-%{release}
 Requires:	bash-completion >= 2.0
-%{?noarchpackage}
+BuildArch:	noarch
 
 %description -n bash-completion-sway
 Bash completion for sway.
@@ -69,7 +69,7 @@ Summary:	fish-completion for sway
 Group:		Applications/Shells
 Requires:	%{name} = %{version}-%{release}
 Requires:	fish
-%{?noarchpackage}
+BuildArch:	noarch
 
 %description -n fish-completion-sway
 fish-completion for sway.
@@ -79,7 +79,7 @@ Summary:	ZSH completion for sway
 Group:		Applications/Shells
 Requires:	%{name} = %{version}-%{release}
 Requires:	zsh
-%{?noarchpackage}
+BuildArch:	noarch
 
 %description -n zsh-completion-sway
 ZSH completion for sway.
