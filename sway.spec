@@ -1,19 +1,19 @@
 Summary:	i3-compatible Wayland compositor
 Name:		sway
-Version:	1.5.1
+Version:	1.6
 Release:	1
 License:	MIT
 Group:		Applications
 Source0:	https://github.com/swaywm/sway/releases/download/%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	9a7edc89abfc3f36d47546457e0bc901
+# Source0-md5:	a44921207cd8faaf7c80f97518bb2492
 Patch0:		x32.patch
-Patch1:		%{name}-i3_ipc_compat.patch
 URL:		https://swaywm.org/
 BuildRequires:	OpenGLESv2-devel
 BuildRequires:	bash-completion
 BuildRequires:	cairo-devel
 BuildRequires:	gdk-pixbuf2-devel
 BuildRequires:	json-c-devel >= 0.13
+BuildRequires:	libdrm-devel
 BuildRequires:	libevdev-devel
 BuildRequires:	libinput-devel >= 1.6.0
 BuildRequires:	libxcb-devel
@@ -25,14 +25,15 @@ BuildRequires:	pixman-devel
 BuildRequires:	rpmbuild(macros) >= 1.752
 BuildRequires:	scdoc >= 1.9.2
 BuildRequires:	systemd-devel >= 239
+BuildRequires:	udev-devel
 BuildRequires:	wayland-devel
 BuildRequires:	wayland-protocols >= 1.14
-BuildRequires:	wlroots-devel >= 0.12.0
+BuildRequires:	wlroots-devel >= 0.13.0
 BuildRequires:	xorg-lib-libxkbcommon-devel
 Requires:	json-c >= 0.13
 Requires:	libinput >= 1.6.0
 Requires:	systemd-libs >= 239
-Requires:	wlroots >= 0.12.0
+Requires:	wlroots >= 0.13.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -87,7 +88,6 @@ ZSH completion for sway.
 %prep
 %setup -q
 %patch0 -p1
-%patch1 -p1
 
 %build
 %meson build
