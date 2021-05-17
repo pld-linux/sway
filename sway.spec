@@ -1,7 +1,7 @@
 Summary:	i3-compatible Wayland compositor
 Name:		sway
 Version:	1.6
-Release:	1
+Release:	2
 License:	MIT
 Group:		Applications
 Source0:	https://github.com/swaywm/sway/releases/download/%{version}/%{name}-%{version}.tar.gz
@@ -91,7 +91,8 @@ ZSH completion for sway.
 %patch0 -p1
 
 %build
-%meson build
+%meson build \
+	-Dxwayland=enabled
 %ninja_build -C build
 
 %install
