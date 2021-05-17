@@ -34,6 +34,7 @@ Requires:	json-c >= 0.13
 Requires:	libinput >= 1.6.0
 Requires:	systemd-libs >= 239
 Requires:	wlroots >= 0.13.0
+Suggests:	xorg-xserver-Xwayland
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
