@@ -1,11 +1,11 @@
 Summary:	i3-compatible Wayland compositor
 Name:		sway
-Version:	1.6
-Release:	2
+Version:	1.6.1
+Release:	1
 License:	MIT
 Group:		Applications
 Source0:	https://github.com/swaywm/sway/releases/download/%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	a44921207cd8faaf7c80f97518bb2492
+# Source0-md5:	0bff81d89e9f9236cf00d46119ae4442
 Patch0:		x32.patch
 URL:		https://swaywm.org/
 BuildRequires:	OpenGLESv2-devel
@@ -28,12 +28,12 @@ BuildRequires:	systemd-devel >= 239
 BuildRequires:	udev-devel
 BuildRequires:	wayland-devel
 BuildRequires:	wayland-protocols >= 1.14
-BuildRequires:	wlroots-devel >= 0.13.0
+BuildRequires:	wlroots-devel >= 0.14.0
 BuildRequires:	xorg-lib-libxkbcommon-devel
 Requires:	json-c >= 0.13
 Requires:	libinput >= 1.6.0
 Requires:	systemd-libs >= 239
-Requires:	wlroots >= 0.13.0
+Requires:	wlroots >= 0.14.0
 Suggests:	xorg-xserver-Xwayland
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
