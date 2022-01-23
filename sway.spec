@@ -22,6 +22,7 @@ BuildRequires:	ninja
 BuildRequires:	pango-devel
 BuildRequires:	pcre-devel
 BuildRequires:	pixman-devel
+BuildRequires:	rpm-build >= 4.6
 BuildRequires:	rpmbuild(macros) >= 1.752
 BuildRequires:	scdoc >= 1.9.2
 BuildRequires:	systemd-devel >= 239
