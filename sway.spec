@@ -1,11 +1,11 @@
 Summary:	i3-compatible Wayland compositor
 Name:		sway
-Version:	1.7
+Version:	1.8
 Release:	1
 License:	MIT
 Group:		Applications
 Source0:	https://github.com/swaywm/sway/releases/download/%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	fa6316f217d869cf0859adece8c3f745
+# Source0-md5:	3d3aa8b01f0446ab42a0bb36b37eb08f
 Patch0:		x32.patch
 URL:		https://swaywm.org/
 BuildRequires:	OpenGLESv2-devel
@@ -15,27 +15,29 @@ BuildRequires:	gdk-pixbuf2-devel
 BuildRequires:	json-c-devel >= 0.13
 BuildRequires:	libdrm-devel
 BuildRequires:	libevdev-devel
-BuildRequires:	libinput-devel >= 1.6.0
+BuildRequires:	libinput-devel >= 1.21.0
 BuildRequires:	libxcb-devel
 BuildRequires:	meson >= 0.60.0
 BuildRequires:	ninja
 BuildRequires:	pango-devel
-BuildRequires:	pcre-devel
+BuildRequires:	pcre2-8-devel
 BuildRequires:	pixman-devel
+BuildRequires:	pkgconfig
 BuildRequires:	rpm-build >= 4.6
 BuildRequires:	rpmbuild(macros) >= 1.752
 BuildRequires:	scdoc >= 1.9.2
 BuildRequires:	systemd-devel >= 239
 BuildRequires:	udev-devel
-BuildRequires:	wayland-devel >= 1.20.0
+BuildRequires:	wayland-devel >= 1.21.0
 BuildRequires:	wayland-protocols >= 1.24
-BuildRequires:	wlroots-devel >= 0.15.0
+BuildRequires:	wlroots-devel >= 0.16.0
+BuildRequires:	xcb-util-wm-devel
 BuildRequires:	xorg-lib-libxkbcommon-devel
 Requires:	json-c >= 0.13
-Requires:	libinput >= 1.6.0
+Requires:	libinput >= 1.21.0
 Requires:	systemd-libs >= 239
-Requires:	wayland >= 1.20.0
-Requires:	wlroots >= 0.15.0
+Requires:	wayland >= 1.21.0
+Requires:	wlroots >= 0.16.0
 Suggests:	xorg-xserver-Xwayland
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
