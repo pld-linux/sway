@@ -26,7 +26,7 @@ BuildRequires:	pkgconfig
 BuildRequires:	rpm-build >= 4.6
 BuildRequires:	rpmbuild(macros) >= 1.752
 BuildRequires:	scdoc >= 1.9.2
-BuildRequires:	systemd-devel >= 239
+BuildRequires:	systemd-devel >= 1:239
 BuildRequires:	udev-devel
 BuildRequires:	wayland-devel >= 1.21.0
 BuildRequires:	wayland-protocols >= 1.24
@@ -35,7 +35,7 @@ BuildRequires:	xcb-util-wm-devel
 BuildRequires:	xorg-lib-libxkbcommon-devel
 Requires:	json-c >= 0.13
 Requires:	libinput >= 1.21.0
-Requires:	systemd-libs >= 239
+Requires:	systemd-libs >= 1:239
 Requires:	wayland >= 1.21.0
 Requires:	wlroots >= 0.16.0
 Suggests:	xorg-xserver-Xwayland
@@ -64,7 +64,7 @@ Background images for sway compositor.
 Summary:	Bash completion for sway
 Group:		Applications/Shells
 Requires:	%{name} = %{version}-%{release}
-Requires:	bash-completion >= 2.0
+Requires:	bash-completion >= 1:2.0
 BuildArch:	noarch
 
 %description -n bash-completion-sway
