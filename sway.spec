@@ -1,11 +1,11 @@
 Summary:	i3-compatible Wayland compositor
 Name:		sway
-Version:	1.8
+Version:	1.8.1
 Release:	1
 License:	MIT
 Group:		Applications
 Source0:	https://github.com/swaywm/sway/releases/download/%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	3d3aa8b01f0446ab42a0bb36b37eb08f
+# Source0-md5:	3db9bd06c2dd45e11ae7342a843bc1c8
 Patch0:		x32.patch
 URL:		https://swaywm.org/
 BuildRequires:	OpenGLESv2-devel
