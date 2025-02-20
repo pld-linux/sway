@@ -23,7 +23,7 @@ BuildRequires:	pcre2-8-devel
 BuildRequires:	pixman-devel
 BuildRequires:	pkgconfig
 BuildRequires:	rpm-build >= 4.6
-BuildRequires:	rpmbuild(macros) >= 1.752
+BuildRequires:	rpmbuild(macros) >= 2.042
 BuildRequires:	scdoc >= 1.9.2
 BuildRequires:	systemd-devel >= 1:239
 BuildRequires:	udev-devel
@@ -96,13 +96,13 @@ ZSH completion for sway.
 %patch -P0 -p1
 
 %build
-%meson build \
+%meson \
 	-Dxwayland=enabled
-%ninja_build -C build
+%meson_build
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%ninja_install -C build
+%meson_install
 
 %clean
 rm -rf $RPM_BUILD_ROOT
