@@ -1,11 +1,11 @@
 Summary:	i3-compatible Wayland compositor
 Name:		sway
-Version:	1.10.1
+Version:	1.11
 Release:	1
 License:	MIT
 Group:		Applications
 Source0:	https://github.com/swaywm/sway/releases/download/%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	613475773afc3a3def1380f1ff214942
+# Source0-md5:	798ff1172e8ddb906191116453a1b24b
 Patch0:		x32.patch
 URL:		https://swaywm.org/
 BuildRequires:	bash-completion-devel
@@ -16,7 +16,7 @@ BuildRequires:	libdrm-devel
 BuildRequires:	libevdev-devel
 BuildRequires:	libinput-devel >= 1.26.0
 BuildRequires:	libxcb-devel
-BuildRequires:	meson >= 0.60.0
+BuildRequires:	meson >= 1.3
 BuildRequires:	ninja
 BuildRequires:	pango-devel
 BuildRequires:	pcre2-8-devel
@@ -29,7 +29,7 @@ BuildRequires:	systemd-devel >= 1:239
 BuildRequires:	udev-devel
 BuildRequires:	wayland-devel >= 1.21.0
 BuildRequires:	wayland-protocols >= 1.24
-BuildRequires:	wlroots0.18-devel
+BuildRequires:	wlroots0.19-devel
 BuildRequires:	xcb-util-wm-devel
 BuildRequires:	xorg-lib-libxkbcommon-devel >= 1.5.0
 Requires:	json-c >= 0.13
@@ -39,6 +39,8 @@ Requires:	wayland >= 1.21.0
 Requires:	xorg-lib-libxkbcommon >= 1.5.0
 Suggests:	xorg-xserver-Xwayland
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+%define		filterout_cpp	-DNDEBUG
 
 %description
 Sway is a tiling Wayland compositor and a drop-in replacement for the
